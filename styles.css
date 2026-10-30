@@ -2,9 +2,18 @@
     padding: 0;
     box-sizing: border-box;
     color: var(--fg);
+    font-family: var(--font-body);
+}
+
+a {
+    text-decoration: none;
 }
 
 :root {
+    --font-heading: "Fraunces", serif;
+    --font-body: sans-serif;
+    --font-mono: monospace;
+
     --bg: rgba(255, 253, 248, 1);
     --fg: rgba(76, 91, 82, 1);
 
@@ -29,18 +38,6 @@
     --danger-fg: rgba(163, 63, 49, 1);
 
     --border: rgba(215, 203, 182, 1);
-}
-
-.sans {
-    font-family: sans-serif;
-}
-
-.mono {
-    font-family: monospace;
-}
-
-.serif {
-    font-family: serif;
 }
 
 .btn {
@@ -124,5 +121,21 @@
         .card__content {
             font-size: 0.75rem;
         }
+    }
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: -0.023rem;
+    color: var(--accent);
+    text-decoration: none;
+
+    & > svg {
+        aspect-ratio: 1/1;
+        height: 2rem;
     }
 }
