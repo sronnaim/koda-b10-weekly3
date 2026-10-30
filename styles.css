@@ -1,6 +1,7 @@
 *, *::before, *::after {
     padding: 0;
     box-sizing: border-box;
+    color: var(--fg);
 }
 
 :root {
@@ -99,6 +100,29 @@
 .card {
     border: 1px solid var(--border);
     border-radius: 1.1rem;
-    display: inline-block;
+    display: flex;
+    align-items: center;
     padding: 1rem;
+    background-color: var(--bg);
+    gap: 0.875rem;
+
+    .card__thumb {
+        max-width: 30%;    
+
+        .card__thumb-img {
+            aspect-ratio: 1/1;
+            width: 100%;
+        }
+    }
+
+    .card__body {
+        .card__title {
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .card__content {
+            font-size: 0.75rem;
+        }
+    }
 }
