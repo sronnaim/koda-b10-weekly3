@@ -161,13 +161,19 @@ main {
     }
 
     .card__body {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+
         .card__title {
             font-weight: 600;
             color: var(--accent);
+            font-family: var(--font-heading);
         }
 
         .card__content {
             font-size: 0.75rem;
+            line-height: 1.325rem;
         }
     }
 }
@@ -511,8 +517,21 @@ main {
 }
 
 .steps {
+    padding: 1.6875rem 1rem 2.5rem 1rem;
+
     .steps__container {
-        display: flex;
-        flex-direction: column;
+        max-width: 68rem;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1fr 1fr;
+
+        @media (width >=64rem) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .steps__card-badge {
+            font-family: var(--font-mono);
+            font-size: 0.6875rem;
+        }
     }
 }
