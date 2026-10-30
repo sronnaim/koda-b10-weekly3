@@ -1,6 +1,6 @@
-* {
+*, *::before, *::after {
     padding: 0;
-    margin: 0;
+    box-sizing: border-box;
 }
 
 :root {
@@ -29,3 +29,69 @@
 
     --border: rgba(215, 203, 182, 1);
 }
+
+.sans {
+    font-family: sans-serif;
+}
+
+.mono {
+    font-family: monospace;
+}
+
+.serif {
+    font-family: serif;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--primary-fg);
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-weight: 600;
+}
+
+.btn--ghost {
+    background-color: var(--primary-fg);
+    color: var(--primary);
+}
+
+.btn--outline {
+    background-color: var(--primary-fg);
+    color: var(--primary);
+    border: 1px solid var(--border);
+}
+
+.btn--warn {
+    background-color: var(--warning);
+    color: var(--warning-fg);
+    border: 1px solid rgb(from var(--warning-fg) r g b / 0.25);
+}
+
+.btn--info {
+    background-color: var(--info);
+    color: var(--info-fg);
+    border: 1px solid rgb(from var(--info-fg) r g b / 0.25);
+}
+
+.btn--danger {
+    background-color: var(--danger);
+    color: var(--danger-fg);
+    border: 1px solid rgb(from var(--danger-fg) r g b / 0.25);
+}
+
+.btn--success {
+    background-color: var(--success);
+    color: var(--success-fg);
+    border: 1px solid rgb(from var(--success-fg) r g b / 0.25);
+}
+
+.btn--icon {
+    aspect-ratio: 1 / 1;
+    max-width: min-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
