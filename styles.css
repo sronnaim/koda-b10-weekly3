@@ -1,0 +1,31 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --bg: rgba(255, 253, 248, 1);
+    --fg: rgba(76, 91, 82, 1);
+
+    --accent: rgba(19, 35, 27, 1);
+
+    --primary: rgba(15, 107, 79);
+    --primary-fg: rgba(255, 253, 248, 1);
+
+    --muted: rgba(244, 239, 228, 1);
+    --muted-fg: rgba(132, 146, 138, 1);
+
+    --info: rgba(232, 241, 245, 1);
+    --info-fg: rgba(47, 96, 126);
+
+    --warning: rgba(251, 241, 216, 1);
+    --warning-fg: rgba(150, 104, 15);
+
+    --success: rgba(229, 243, 234, 1);
+    --success-fg: rgba(33, 122, 81, 1);
+
+    --danger: rgba(249, 234, 229, 1);
+    --danger-fg: rgba(163, 63, 49, 1);
+
+    --border: rgba(215, 203, 182, 1);
+}
