@@ -25,6 +25,16 @@ button {
     border: none;
 }
 
+input[type="radio"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: #fff;
+    /* Not removed via appearance */
+    margin: 0;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -648,5 +658,61 @@ main {
                 color: var(--primary);
             }
         }
+    }
+}
+
+.feed-container {
+    display: flex;
+    flex-direction: column;
+
+    .heading {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 1.125rem;
+
+        .heading__eyebrow {
+            font-size: 0.6875;
+        }
+
+        .heading__main {
+            font-family: var(--font-heading);
+            color: var(--accent);
+        }
+
+        .heading__descs {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            p {
+                max-width: 31rem;
+                font-size: 0.875rem;
+            }
+
+            @media (width >=64rem) {
+                flex-direction: row;
+                align-items: end;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+.btn-group {
+    background-color: var(--bg);
+    display: inline-flex;
+    width: fit-content;
+    border-radius: 9999px;
+    padding: 0.3rem;
+    border: 1px solid var(--border);
+
+    &>* {
+        font-size: 0.75rem;
+        padding: 0.475rem 0.6875rem;
+    }
+
+    &>:not([data-active="true"]) {
+        color: var(--fg);
     }
 }
