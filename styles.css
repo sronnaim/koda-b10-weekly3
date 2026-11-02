@@ -207,9 +207,10 @@ main {
     padding: 1rem;
     background-color: var(--bg);
     gap: 0.875rem;
+    flex-wrap: wrap;
 
     .card__thumb {
-        max-width: 18%;
+        flex: 0 0 4.75rem;
 
         .card__thumb-img {
             aspect-ratio: 1/1;
@@ -222,7 +223,7 @@ main {
         display: flex;
         flex-direction: column;
         gap: 0.2rem;
-        flex-grow: 1;
+        flex: 1 1 10rem;
 
         .card__title {
             font-weight: 600;
@@ -231,9 +232,13 @@ main {
         }
 
         .card__content {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
             font-size: 0.75rem;
             line-height: 1.325rem;
             width: 103%;
+            gap: 0.5rem;
         }
 
         .card__footer {
@@ -269,6 +274,7 @@ main {
     justify-content: center;
     background-color: var(--bg);
     border-bottom: 1px solid var(--border);
+    z-index: 100;
 
     &:has(.page-header__menu-toggle[open]) {
         position: fixed;
@@ -804,6 +810,124 @@ main {
         max-width: 27.5rem;
         margin-top: 1.125rem;
         margin-bottom: 0.75rem;
+    }
+
+    .lfeed__proof-filter {
+        display: flex;
+        font-size: 0.75rem;
+        align-items: center;
+        gap: 0.625rem;
+        border-radius: 9999px;
+        background-color: var(--bg);
+        width: fit-content;
+        padding: 0.5rem 1rem;
+        border: 1px solid var(--border);
+    }
+
+    .lfeed__list {
+        border-radius: 1rem;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        max-width: 100%;
+        margin-top: 1.125rem;
+
+        &>li {
+            border: none;
+            border-radius: 0;
+
+            .lfeed__li-labels {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 0.5rem;
+
+                .lfeed__li-id,
+                .lfeed__li-agency {
+                    font-size: 0.8125rem;
+                }
+
+                .lfeed__li-id {
+                    font-family: var(--font-mono);
+                    color: var(--muted-fg);
+
+                    &:after {
+                        display: inline;
+                        content: "·";
+                    }
+                }
+
+                .lfeed__li-agency {
+                    font-weight: 600;
+                    color: var(--accent);
+                    flex: 1 1 4rem;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+
+                .btn {
+                    font-size: 0.6875rem;
+                    width: fit-content;
+                    padding: 0.3125rem 0.625rem;
+                }
+            }
+
+            .card__body> :nth-child(2) {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .lfeed__li-title {
+                font-size: 1rem;
+                color: var(--accent);
+            }
+
+            .lfeed__li-cat::before {
+                margin-right: 0.5rem;
+                display: inline;
+                content: "·";
+            }
+
+            .lfeed__li-actions {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                .lfeed__li-like-btn {
+                    display: flex;
+                    align-items: center;
+                    font-size: 0.6875rem;
+                    color: var(--fg);
+                    font-family: var(--font-mono);
+                    font-weight: 400;
+
+                    [data-closed="true"] & {
+                        color: var(--muted-fg);
+                    }
+                }
+
+                .lfeed__li-proof {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.2rem;
+                    font-size: 0.6875rem;
+                    color: var(--fg);
+                    font-family: var(--font-mono);
+                    font-weight: 400;
+                }
+
+                .lfeed__li-day {
+                    font-size: 0.8125rem;
+                }
+
+                a {
+                    font-size: 0.75rem;
+                    padding: 0;
+                    color: var(--primary);
+                }
+            }
+        }
     }
 }
 
