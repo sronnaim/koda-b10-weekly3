@@ -232,30 +232,30 @@
                     </ul>
                 </section>
                 <aside>
-                    <section>
+                    <section class="help__statuses">
                         <hgroup>
-                            <p>Status Meaning</p>
+                            <p>Status Meanings</p>
                             <h2>What does each status mean?</h2>
                         </hgroup>
                         <dl>
-                            <div>
-                                <dt>
+                            <div class="help__status">
+                                <dt class="btn btn--secondary">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                         xmlns="http://www.w3.org/2000/svg" aria-hidden="true" stroke-linecap="round"
-                                        stroke-linejoin="round">
+                                        stroke-linejoin="round" stroke="currentColor">
                                         <path
                                             d="M10.5 6C10.5 8.48528 8.48528 10.5 6 10.5C3.51472 10.5 1.5 8.48528 1.5 6C1.5 3.51472 3.51472 1.5 6 1.5C8.48528 1.5 10.5 3.51472 10.5 6Z" />
                                         <path d="M6 3.5V6L7.75 7" />
                                     </svg>
-                                    Submitted
+                                    <span>Submitted</span>
                                 </dt>
                                 <dd>Your report was submitted and received by our intake router.</dd>
                             </div>
-                            <div>
-                                <dt>
+                            <div class="help__status">
+                                <dt class="btn btn--success">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                         xmlns="http://www.w3.org/2000/svg" aria-hidden="true" stroke-linecap="round"
-                                        stroke-linejoin="round">
+                                        stroke-linejoin="round" stroke="currentColor">
                                         <path d="M11 6H8L7 7.5H5L4 6H1" />
                                         <path
                                             d="M2.725 2.555L1 6V9C1 9.26522 1.10536 9.51957 1.29289 9.70711C1.48043 9.89464 1.73478 10 2 10H10C10.2652 10 10.5196 9.89464 10.7071 9.70711C10.8946 9.51957 11 9.26522 11 9V6L9.275 2.555C9.19221 2.38839 9.06459 2.24819 8.90648 2.15014C8.74837 2.05209 8.56604 2.0001 8.38 2H3.62C3.43396 2.0001 3.25163 2.05209 3.09352 2.15014C2.93541 2.24819 2.80779 2.38839 2.725 2.555Z" />
@@ -264,8 +264,8 @@
                                 </dt>
                                 <dd>Verified by WargaReport and queued for agency dispatch.</dd>
                             </div>
-                            <div>
-                                <dt>
+                            <div class="help__status">
+                                <dt class="btn btn--warn">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                         xmlns="http://www.w3.org/2000/svg" stroke-linecap="round"
                                         stroke-linejoin="round" aria-hidden="true" stroke="currentColor">
@@ -273,12 +273,12 @@
                                             d="M9 5.5C9 7.433 7.433 9 5.5 9C3.567 9 2 7.433 2 5.5C2 3.567 3.567 2 5.5 2C7.433 2 9 3.567 9 5.5Z" />
                                         <path d="M10.5001 10.5L8.3501 8.34998" />
                                     </svg>
-                                    In review
+                                    <span>In review</span>
                                 </dt>
                                 <dd>Agency coordinators are assessing field safety and equipment.</dd>
                             </div>
-                            <div>
-                                <dt>
+                            <div class="help__status">
+                                <dt class="btn btn--success">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                         xmlns="http://www.w3.org/2000/svg" aria-hidden="true" stroke-linecap="round"
                                         stroke-linejoin="round" stroke="currentColor">
@@ -288,12 +288,12 @@
                                             d="M6.5 3.5C6.5 4.60457 5.60457 5.5 4.5 5.5C3.39543 5.5 2.5 4.60457 2.5 3.5C2.5 2.39543 3.39543 1.5 4.5 1.5C5.60457 1.5 6.5 2.39543 6.5 3.5Z" />
                                         <path d="M8 5.5L9 6.5L11 4.5" />
                                     </svg>
-                                    Assigned
+                                    <span>Assigned</span>
                                 </dt>
                                 <dd>A field crew or technician is dispatched to the street.</dd>
                             </div>
-                            <div>
-                                <dt>
+                            <div class="help__status">
+                                <dt class="btn btn--warn">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                         xmlns="http://www.w3.org/2000/svg" stroke-linecap="round"
                                         stroke-linejoin="round" stroke="currentColor">
@@ -302,12 +302,12 @@
                                         <path d="M6 4V6" />
                                         <path d="M6 8H6.005" />
                                     </svg>
-                                    Awaiting your info
+                                    <span>Awaiting your info</span>
                                 </dt>
                                 <dd>Inspector needs clarification or an updated photo.</dd>
                             </div>
-                            <div>
-                                <dt>
+                            <div class="help__status">
+                                <dt class="btn btn--success">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                         xmlns="http://www.w3.org/2000/svg" aria-hidden="true" stroke="currentColor"
                                         stroke-linecap="round" stroke-linejoin="round">
@@ -315,12 +315,12 @@
                                             d="M11 5.54005V6.00005C10.9994 7.07827 10.6503 8.12739 10.0047 8.99097C9.35908 9.85454 8.45164 10.4863 7.41768 10.792C6.38372 11.0977 5.27863 11.061 4.26724 10.6873C3.25584 10.3137 2.39233 9.6231 1.80548 8.71859C1.21863 7.81407 0.939896 6.74409 1.01084 5.66821C1.08178 4.59234 1.4986 3.56822 2.19914 2.74859C2.89968 1.92896 3.84639 1.35775 4.89809 1.12013C5.9498 0.882509 7.05013 0.991223 8.035 1.43005" />
                                         <path d="M4.5 5.5L6 7L11 2" />
                                     </svg>
-                                    Resolved
+                                    <span>Resolved</span>
                                 </dt>
                                 <dd>Physical fix completed and inspection statement published.</dd>
                             </div>
-                            <div>
-                                <dt>
+                            <div class="help__status">
+                                <dt class="btn btn--disabled">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                         xmlns="http://www.w3.org/2000/svg" stroke-linecap="round"
                                         stroke-linejoin="round" aria-hidden="true" stroke="currentColor">
@@ -330,13 +330,13 @@
                                             d="M2.5 4V9.5C2.5 9.76522 2.60536 10.0196 2.79289 10.2071C2.98043 10.3946 3.23478 10.5 3.5 10.5H8.5C8.76522 10.5 9.01957 10.3946 9.20711 10.2071C9.39464 10.0196 9.5 9.76522 9.5 9.5V4" />
                                         <path d="M5 6H7" />
                                     </svg>
-                                    Closed
+                                    <span>Closed</span>
                                 </dt>
                                 <dd>Case completed and archived.</dd>
                             </div>
                         </dl>
                     </section>
-                    <section>
+                    <section class="help__warning">
                         <h2>
                             <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true" stroke-width="1.25"
@@ -348,13 +348,14 @@
                                 <path
                                     d="M9.375 3.75C9.70652 3.75 10.0245 3.8817 10.2589 4.11612C10.4933 4.35054 10.625 4.66848 10.625 5" />
                             </svg>
-
                             Is this an acute life-safety emergency?
                         </h2>
                         <p>WargaReport is for non-urgent municipal infrastructure. If there is an
                             active fire, medical crisis, or immediate hazard to life:</p>
-                        <a href="tel:112">Call 112 (National Emergency)</a>
-                        <a href="tel:113">Call 113 (Fire Dispatch)</a>
+                        <div>
+                            <a href="tel:112" class="btn btn--danger">Call 112 (National Emergency)</a>
+                            <a href="tel:113" class="btn btn--danger">Call 113 (Fire Dispatch)</a>
+                        </div>
                     </section>
                 </aside>
             </div>
