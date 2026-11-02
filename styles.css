@@ -19,7 +19,7 @@ li {
 body {
     position: relative;
     color: var(--fg);
-    background-color: rgba(247, 242, 231, 1);
+    background-color: var(--app-bg);
 }
 
 button {
@@ -64,6 +64,7 @@ main {
     --font-body: 'Public Sans', sans-serif;
     --font-mono: 'IBM Plex Mono', monospace;
 
+    --app-bg: rgba(247, 242, 231, 1);
     --bg: rgba(255, 253, 248, 1);
     --fg: rgba(76, 91, 82, 1);
 
@@ -714,6 +715,8 @@ main {
 .lfeed {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 68rem;
 
     .lfeed__heading {
         display: flex;
@@ -728,7 +731,8 @@ main {
 
         .lfeed__heading-eyebrow {
             font-size: 0.6875;
-            font-family: monospace;
+            font-family: var(--font-mono);
+            text-transform: uppercase;
         }
 
         .lfeed__heading-main {
@@ -979,14 +983,15 @@ main {
 .track {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     gap: 1rem;
-    width: 100%;
+    width: fit-content;
     max-width: 68rem;
 
     @media (width >=64rem) {
         flex-direction: row;
         justify-content: space-between;
+        width: 100%;
     }
 
     &>:first-child {
@@ -1038,6 +1043,7 @@ main {
         .track__eyebrow {
             font-family: var(--font-mono);
             font-size: 0.6875rem;
+            text-transform: uppercase;
         }
 
         .track__title {
@@ -1109,10 +1115,18 @@ main {
 }
 
 .help {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 68rem;
+
+    @media (width >=64rem) {}
 
     .help__eyebrow {
         font-family: var(--font-mono);
         font-size: 0.6875rem;
+        text-transform: uppercase;
     }
 
     .help__title {
@@ -1125,5 +1139,75 @@ main {
     .help__descs {
         font-size: 0.875rem;
         max-width: 31rem;
+    }
+
+    .help__content-container {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+
+        .help__faq {
+            h2 {
+                font-family: var(--font-mono);
+                font-size: 0.6875rem;
+                font-weight: 500;
+                text-transform: uppercase;
+                color: var(--muted-fg)
+            }
+
+            ul {
+                margin-top: 0.75rem;
+                display: flex;
+                flex-direction: column;
+                gap: 0.625rem;
+            }
+
+            & details {
+                border-radius: 0.75rem;
+                background-color: var(--bg);
+                overflow: hidden;
+                border: 1px solid var(--border);
+
+                &[open] {
+                    hgroup {
+                        background-color: var(--app-bg);
+                        border-bottom: 1px solid var(--border);
+                    }
+                }
+
+                hgroup {
+                    padding: 1.125rem 1rem;
+
+                    p {
+                        color: var(--primary);
+                        font-weight: 600;
+                        font-size: 0.6125rem;
+                        font-family: var(--font-mono);
+                        text-transform: uppercase;
+                    }
+
+                    h3 {
+                        margin-top: 0.2rem;
+                        font-weight: 600;
+                        color: var(--accent);
+                        font-size: 0.875rem;
+                    }
+                }
+
+                summary {
+                    list-style: none;
+                    cursor: pointer;
+                }
+
+                ol {
+                    padding: 1rem 1.25rem;
+
+                    li {
+                        font-size: 0.75rem;
+                        line-height: 1.275rem;
+                    }
+                }
+            }
+        }
     }
 }
