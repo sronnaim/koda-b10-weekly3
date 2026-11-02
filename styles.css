@@ -272,6 +272,7 @@ main {
     letter-spacing: -0.023rem;
     color: var(--accent);
     text-decoration: none;
+    width: fit-content;
 
     &>svg {
         aspect-ratio: 1/1;
@@ -356,6 +357,11 @@ main {
             a {
                 font-weight: 500;
                 font-size: 0.875rem;
+
+                &[data-current="true"] {
+                    background-color: var(--primary);
+                    color: var(--bg);
+                }
             }
         }
 
