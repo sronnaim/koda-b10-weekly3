@@ -1709,18 +1709,26 @@ main {
             max-width: 48.5625rem;
         }
 
-        hgroup {
-            p {
-                font-family: var(--font-mono);
-                font-size: 0.6875rem;
-                color: var(--muted-fg);
+        .rf__form-header {
+            hgroup {
+                p {
+                    font-family: var(--font-mono);
+                    font-size: 0.6875rem;
+                    color: var(--muted-fg);
+                    text-transform: uppercase;
+                }
+
+                h2 {
+                    margin-top: 0.35rem;
+                    font-family: var(--font-heading);
+                    font-size: 1.6rem;
+                    color: var(--accent);
+                }
             }
 
-            h2 {
-                margin-top: 0.34rem;
-                font-family: var(--font-heading);
-                font-size: 1.6rem;
-                color: var(--accent);
+            &>p {
+                margin-top: 0.375rem;
+                font-size: 0.8125rem;
             }
         }
 
@@ -1728,12 +1736,6 @@ main {
             border: none;
             display: flex;
             flex-direction: column;
-
-            legend {
-                float: left;
-                margin-top: 0.375rem;
-                font-size: 0.8125rem;
-            }
 
             &>div {
                 margin-top: 1.25rem;
@@ -1817,11 +1819,6 @@ main {
         text-overflow: ellipsis;
         border-radius: 0.75rem;
         padding: 0.625rem 0.875rem;
-    }
-
-    &>p {
-        margin-top: 0.375rem;
-        font-size: 0.8125rem;
     }
 
     .rf__form-location-area-select {

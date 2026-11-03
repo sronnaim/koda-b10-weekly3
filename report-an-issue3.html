@@ -92,7 +92,143 @@
         </div>
     </header>
     <main>
-
+        <div class="rf">
+            <section class="rf__legend">
+                <hgroup>
+                    <p>Community Intake</p>
+                    <h1>Report an Issue</h1>
+                </hgroup>
+                <p>Public civic reporting for Indonesian
+                    municipal services.</p>
+                <ol>
+                    <li class="btn">
+                        <span>01</span>
+                        <span>Topic</span>
+                    </li>
+                    <li class="btn">
+                        <span>02</span>
+                        <span>Location</span>
+                    </li>
+                    <li class="btn" data-current="true">
+                        <span>03</span>
+                        <span>Proof</span>
+                    </li>
+                    <li class="btn">
+                        <span>04</span>
+                        <span>Review &amp; Send</span>
+                    </li>
+                </ol>
+                <div class="rf__legend-descs">
+                    <h2>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"
+                            aria-hidden="true">
+                            <path
+                                d="M6.99999 12.8334C6.99999 12.8334 11.6667 10.5001 11.6667 7.00008V2.91675L6.99999 1.16675L2.33333 2.91675V7.00008C2.33333 10.5001 6.99999 12.8334 6.99999 12.8334Z" />
+                        </svg>
+                        <span>Independent Verification</span>
+                    </h2>
+                    <p>Our verification desk checks each report and
+                        routes it to the municipal agency (Bina
+                        Marga, PAM JAYA, Dishub, DLH, Satpol PP,
+                        Citata). Resolution timestamps are tracked
+                        publicly.</p>
+                </div>
+                <a href="/feed.html">Cancel and return to feed</a>
+            </section>
+            <section>
+                <div class="rf__form rf__form-evidence">
+                    <div class="rf__form-header">
+                        <hgroup>
+                            <p>Step 03 of 04</p>
+                            <h2>Attach Evidence</h2>
+                        </hgroup>
+                        <p>Reports with photographic proof or audio notes are prioritized by field dispatchers.</p>
+                    </div>
+                    <form action="/report-an-issue4.html">
+                        <div>
+                            <label for="file-upload-image">
+                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" stroke-width="2.33333" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke="currentColor">
+                                    <path
+                                        d="M4.66662 17.3834C3.79616 16.4991 3.13866 15.428 2.74405 14.2516C2.34943 13.0752 2.22809 11.8243 2.38922 10.594C2.55035 9.36362 2.98973 8.18618 3.67398 7.15104C4.35823 6.11591 5.26937 5.25031 6.33819 4.61997C7.40702 3.98964 8.60542 3.61115 9.8424 3.51325C11.0794 3.41535 12.3224 3.60061 13.4771 4.05497C14.6318 4.50932 15.6677 5.22082 16.5063 6.13544C17.3448 7.05005 17.964 8.14372 18.3166 9.3334H20.4166C21.5295 9.3484 22.6088 9.71667 23.4987 10.385C24.3886 11.0534 25.0431 11.9873 25.3676 13.0519C25.6922 14.1165 25.6701 15.2566 25.3044 16.3078C24.9387 17.359 24.2485 18.2668 23.3333 18.9001" />
+                                    <path d="M14 14V24.5" />
+                                    <path d="M9.33325 19.8334L13.9999 15.1667L18.6666 19.8334" />
+                                </svg>
+                                <span>Upload evidence files or use camera simulation</span>
+                                <span>Images, audio voice notes, inspection video clips (JPG, MP4, M4A)</span>
+                                <span>
+                                    <input type="file" id="file-upload-image" accept="image/*" />
+                                    <input type="file" id="file-upload-audio" accept="audio/*" />
+                                    <input type="file" id="file-upload-video" accept="video/*" />
+                                </span>
+                            </label>
+                        </div>
+                        <div class="rf__form-evidence-attached">
+                            <div>
+                                <h2>Attached Evidence (2)</h2>
+                                <p>Click any card to inspect</p>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="assets/evd1.png">
+                                        <div>
+                                            <img src="/assets/evd1.png" alt="Evidence 1">
+                                        </div>
+                                        <span>
+                                            <h3>incident_capture_camera.jpg</h3>
+                                        </span>
+                                        <span>
+                                            <span>IMAGE</span>
+                                            <span>2.4 MB</span>
+                                        </span>
+                                        <span>Photographed live on-site by resident camera.</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="assets/evd2.mp4">
+                                        <div>
+                                            <video controls>
+                                                <source src="/assets/evd2.mp4" type="video/mp4" />
+                                            </video>
+                                        </div>
+                                        <span>
+                                            <h3>quick_site_clip.mp4</h3>
+                                        </span>
+                                        <span>
+                                            <span>VIDEO</span>
+                                            <span>4.8 MB</span>
+                                        </span>
+                                        <span>12-second horizontal pan of incident.</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="rf__form-footer">
+                            <a href="/report-an-issue2.html" class="btn btn--secondary rf__form-footer-btn--back">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke="currentColor">
+                                    <path d="M9.5 6H2.5" />
+                                    <path d="M6 9.5L2.5 6L6 2.5" />
+                                </svg>
+                                <span>Back</span>
+                            </a>
+                            <button type="submit" class="btn">
+                                <span>Continue</span>
+                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" stroke-width="1.08333" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke="currentColor" aria-hidden="true">
+                                    <path d="M2.70831 6.5H10.2916" />
+                                    <path d="M6.5 2.70825L10.2917 6.49992L6.5 10.2916" />
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
     </main>
     <footer class="page-footer">
         <div class="page-footer__container">
