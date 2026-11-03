@@ -91,111 +91,207 @@
             </details>
         </div>
     </header>
-    <main class="rf">
-        <section class="rf__legend">
-            <hgroup>
-                <p>Community Intake</p>
-                <h1>Report an Issue</h1>
-            </hgroup>
-            <p>Public civic reporting for Indonesian
-                municipal services.</p>
-            <ol>
-                <li class="btn" data-current="true">
-                    <span>01</span>
-                    <span>Topic</span>
-                </li>
-                <li class="btn">
-                    <span>02</span>
-                    <span>Location</span>
-                </li>
-                <li class="btn">
-                    <span>03</span>
-                    <span>Proof</span>
-                </li>
-                <li class="btn">
-                    <span>04</span>
-                    <span>Review &amp; Send</span>
-                </li>
-            </ol>
-            <div class="rf__legend-descs">
-                <h2>
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"
-                        aria-hidden="true">
-                        <path
-                            d="M6.99999 12.8334C6.99999 12.8334 11.6667 10.5001 11.6667 7.00008V2.91675L6.99999 1.16675L2.33333 2.91675V7.00008C2.33333 10.5001 6.99999 12.8334 6.99999 12.8334Z" />
-                    </svg>
-                    <span>Independent Verification</span>
-                </h2>
-                <p>Our verification desk checks each report and
-                    routes it to the municipal agency (Bina
-                    Marga, PAM JAYA, Dishub, DLH, Satpol PP,
-                    Citata). Resolution timestamps are tracked
-                    publicly.</p>
-            </div>
-            <a href="/feed.html">Cancel and return to feed</a>
-        </section>
-        <section>
-            <div>
+    <main>
+        <div class="rf">
+            <section class="rf__legend">
                 <hgroup>
-                    <p>Step 01 of 04</p>
-                    <h2>What Needs Fixing</h2>
+                    <p>Community Intake</p>
+                    <h1>Report an Issue</h1>
                 </hgroup>
-                <form action="/report-an-issue2.html">
-                    <fieldset>
-                        <legend>
-                            Select the municipal service category that best matches the issue observed.
-                        </legend>
-                        <label>
-                            <span>
-                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" stroke-width="1.25" stroke-linecap="round"
+                <p>Public civic reporting for Indonesian
+                    municipal services.</p>
+                <ol>
+                    <li class="btn" data-current="true">
+                        <span>01</span>
+                        <span>Topic</span>
+                    </li>
+                    <li class="btn">
+                        <span>02</span>
+                        <span>Location</span>
+                    </li>
+                    <li class="btn">
+                        <span>03</span>
+                        <span>Proof</span>
+                    </li>
+                    <li class="btn">
+                        <span>04</span>
+                        <span>Review &amp; Send</span>
+                    </li>
+                </ol>
+                <div class="rf__legend-descs">
+                    <h2>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"
+                            aria-hidden="true">
+                            <path
+                                d="M6.99999 12.8334C6.99999 12.8334 11.6667 10.5001 11.6667 7.00008V2.91675L6.99999 1.16675L2.33333 2.91675V7.00008C2.33333 10.5001 6.99999 12.8334 6.99999 12.8334Z" />
+                        </svg>
+                        <span>Independent Verification</span>
+                    </h2>
+                    <p>Our verification desk checks each report and
+                        routes it to the municipal agency (Bina
+                        Marga, PAM JAYA, Dishub, DLH, Satpol PP,
+                        Citata). Resolution timestamps are tracked
+                        publicly.</p>
+                </div>
+                <a href="/feed.html">Cancel and return to feed</a>
+            </section>
+            <section>
+                <div class="rf__form">
+                    <hgroup>
+                        <p>Step 01 of 04</p>
+                        <h2>What Needs Fixing</h2>
+                    </hgroup>
+                    <form action="/report-an-issue2.html">
+                        <fieldset>
+                            <legend>
+                                Select the municipal service category that best matches the issue observed.
+                            </legend>
+                            <div>
+                                <label>
+                                    <span>
+                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" stroke-width="1.25"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"
+                                            aria-hidden="true">
+                                            <path
+                                                d="M6.43125 2.41251L1.1375 11.25C1.02835 11.439 0.970602 11.6533 0.969991 11.8716C0.96938 12.0898 1.02593 12.3045 1.13401 12.4941C1.2421 12.6837 1.39795 12.8417 1.58607 12.9524C1.77418 13.0631 1.988 13.1226 2.20625 13.125H12.7937C13.012 13.1226 13.2258 13.0631 13.4139 12.9524C13.602 12.8417 13.7579 12.6837 13.866 12.4941C13.9741 12.3045 14.0306 12.0898 14.03 11.8716C14.0294 11.6533 13.9716 11.439 13.8625 11.25L8.56875 2.41251C8.45733 2.22882 8.30045 2.07696 8.11325 1.97156C7.92604 1.86616 7.71483 1.81079 7.5 1.81079C7.28516 1.81079 7.07395 1.86616 6.88675 1.97156C6.69955 2.07696 6.54267 2.22882 6.43125 2.41251Z" />
+                                            <path d="M7.5 5.625V8.125" />
+                                            <path d="M7.5 10.625H7.50625" />
+                                        </svg>
+                                        <span>Roads &amp; Transit</span>
+                                        <span>48h SLA</span>
+                                    </span>
+                                    <span>Pothole / Sidewalk (Trotoar)</span>
+                                    <span>Potholes, broken sidewalk slabs, damaged drainage grates</span>
+                                    <input type="radio" name="cat">
+                                </label>
+                                <label>
+                                    <span>
+                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" stroke-width="1.25"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"
+                                            aria-hidden="true">
+                                            <path
+                                                d="M6.43125 2.41251L1.1375 11.25C1.02835 11.439 0.970602 11.6533 0.969991 11.8716C0.96938 12.0898 1.02593 12.3045 1.13401 12.4941C1.2421 12.6837 1.39795 12.8417 1.58607 12.9524C1.77418 13.0631 1.988 13.1226 2.20625 13.125H12.7937C13.012 13.1226 13.2258 13.0631 13.4139 12.9524C13.602 12.8417 13.7579 12.6837 13.866 12.4941C13.9741 12.3045 14.0306 12.0898 14.03 11.8716C14.0294 11.6533 13.9716 11.439 13.8625 11.25L8.56875 2.41251C8.45733 2.22882 8.30045 2.07696 8.11325 1.97156C7.92604 1.86616 7.71483 1.81079 7.5 1.81079C7.28516 1.81079 7.07395 1.86616 6.88675 1.97156C6.69955 2.07696 6.54267 2.22882 6.43125 2.41251Z" />
+                                            <path d="M7.5 5.625V8.125" />
+                                            <path d="M7.5 10.625H7.50625" />
+                                        </svg>
+                                        <span>Roads &amp; Transit</span>
+                                        <span>48h SLA</span>
+                                    </span>
+                                    <span>Pothole / Sidewalk (Trotoar)</span>
+                                    <span>Potholes, broken sidewalk slabs, damaged drainage grates</span>
+                                    <input type="radio" name="cat">
+                                </label>
+                                <label>
+                                    <span>
+                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" stroke-width="1.25"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"
+                                            aria-hidden="true">
+                                            <path
+                                                d="M6.43125 2.41251L1.1375 11.25C1.02835 11.439 0.970602 11.6533 0.969991 11.8716C0.96938 12.0898 1.02593 12.3045 1.13401 12.4941C1.2421 12.6837 1.39795 12.8417 1.58607 12.9524C1.77418 13.0631 1.988 13.1226 2.20625 13.125H12.7937C13.012 13.1226 13.2258 13.0631 13.4139 12.9524C13.602 12.8417 13.7579 12.6837 13.866 12.4941C13.9741 12.3045 14.0306 12.0898 14.03 11.8716C14.0294 11.6533 13.9716 11.439 13.8625 11.25L8.56875 2.41251C8.45733 2.22882 8.30045 2.07696 8.11325 1.97156C7.92604 1.86616 7.71483 1.81079 7.5 1.81079C7.28516 1.81079 7.07395 1.86616 6.88675 1.97156C6.69955 2.07696 6.54267 2.22882 6.43125 2.41251Z" />
+                                            <path d="M7.5 5.625V8.125" />
+                                            <path d="M7.5 10.625H7.50625" />
+                                        </svg>
+                                        <span>Roads &amp; Transit</span>
+                                        <span>48h SLA</span>
+                                    </span>
+                                    <span>Pothole / Sidewalk (Trotoar)</span>
+                                    <span>Potholes, broken sidewalk slabs, damaged drainage grates</span>
+                                    <input type="radio" name="cat">
+                                </label>
+                                <label>
+                                    <span>
+                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" stroke-width="1.25"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"
+                                            aria-hidden="true">
+                                            <path
+                                                d="M6.43125 2.41251L1.1375 11.25C1.02835 11.439 0.970602 11.6533 0.969991 11.8716C0.96938 12.0898 1.02593 12.3045 1.13401 12.4941C1.2421 12.6837 1.39795 12.8417 1.58607 12.9524C1.77418 13.0631 1.988 13.1226 2.20625 13.125H12.7937C13.012 13.1226 13.2258 13.0631 13.4139 12.9524C13.602 12.8417 13.7579 12.6837 13.866 12.4941C13.9741 12.3045 14.0306 12.0898 14.03 11.8716C14.0294 11.6533 13.9716 11.439 13.8625 11.25L8.56875 2.41251C8.45733 2.22882 8.30045 2.07696 8.11325 1.97156C7.92604 1.86616 7.71483 1.81079 7.5 1.81079C7.28516 1.81079 7.07395 1.86616 6.88675 1.97156C6.69955 2.07696 6.54267 2.22882 6.43125 2.41251Z" />
+                                            <path d="M7.5 5.625V8.125" />
+                                            <path d="M7.5 10.625H7.50625" />
+                                        </svg>
+                                        <span>Roads &amp; Transit</span>
+                                        <span>48h SLA</span>
+                                    </span>
+                                    <span>Pothole / Sidewalk (Trotoar)</span>
+                                    <span>Potholes, broken sidewalk slabs, damaged drainage grates</span>
+                                    <input type="radio" name="cat">
+                                </label>
+                                <label>
+                                    <span>
+                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" stroke-width="1.25"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"
+                                            aria-hidden="true">
+                                            <path
+                                                d="M6.43125 2.41251L1.1375 11.25C1.02835 11.439 0.970602 11.6533 0.969991 11.8716C0.96938 12.0898 1.02593 12.3045 1.13401 12.4941C1.2421 12.6837 1.39795 12.8417 1.58607 12.9524C1.77418 13.0631 1.988 13.1226 2.20625 13.125H12.7937C13.012 13.1226 13.2258 13.0631 13.4139 12.9524C13.602 12.8417 13.7579 12.6837 13.866 12.4941C13.9741 12.3045 14.0306 12.0898 14.03 11.8716C14.0294 11.6533 13.9716 11.439 13.8625 11.25L8.56875 2.41251C8.45733 2.22882 8.30045 2.07696 8.11325 1.97156C7.92604 1.86616 7.71483 1.81079 7.5 1.81079C7.28516 1.81079 7.07395 1.86616 6.88675 1.97156C6.69955 2.07696 6.54267 2.22882 6.43125 2.41251Z" />
+                                            <path d="M7.5 5.625V8.125" />
+                                            <path d="M7.5 10.625H7.50625" />
+                                        </svg>
+                                        <span>Roads &amp; Transit</span>
+                                        <span>48h SLA</span>
+                                    </span>
+                                    <span>Pothole / Sidewalk (Trotoar)</span>
+                                    <span>Potholes, broken sidewalk slabs, damaged drainage grates</span>
+                                    <input type="radio" name="cat">
+                                </label>
+                                <label>
+                                    <span>
+                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" stroke-width="1.25"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"
+                                            aria-hidden="true">
+                                            <path
+                                                d="M6.43125 2.41251L1.1375 11.25C1.02835 11.439 0.970602 11.6533 0.969991 11.8716C0.96938 12.0898 1.02593 12.3045 1.13401 12.4941C1.2421 12.6837 1.39795 12.8417 1.58607 12.9524C1.77418 13.0631 1.988 13.1226 2.20625 13.125H12.7937C13.012 13.1226 13.2258 13.0631 13.4139 12.9524C13.602 12.8417 13.7579 12.6837 13.866 12.4941C13.9741 12.3045 14.0306 12.0898 14.03 11.8716C14.0294 11.6533 13.9716 11.439 13.8625 11.25L8.56875 2.41251C8.45733 2.22882 8.30045 2.07696 8.11325 1.97156C7.92604 1.86616 7.71483 1.81079 7.5 1.81079C7.28516 1.81079 7.07395 1.86616 6.88675 1.97156C6.69955 2.07696 6.54267 2.22882 6.43125 2.41251Z" />
+                                            <path d="M7.5 5.625V8.125" />
+                                            <path d="M7.5 10.625H7.50625" />
+                                        </svg>
+                                        <span>Roads &amp; Transit</span>
+                                        <span>48h SLA</span>
+                                    </span>
+                                    <span>Pothole / Sidewalk (Trotoar)</span>
+                                    <span>Potholes, broken sidewalk slabs, damaged drainage grates</span>
+                                    <input type="radio" name="cat">
+                                </label>
+                                <label>
+                                    <span>
+                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" stroke-width="1.25"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"
+                                            aria-hidden="true">
+                                            <path
+                                                d="M6.43125 2.41251L1.1375 11.25C1.02835 11.439 0.970602 11.6533 0.969991 11.8716C0.96938 12.0898 1.02593 12.3045 1.13401 12.4941C1.2421 12.6837 1.39795 12.8417 1.58607 12.9524C1.77418 13.0631 1.988 13.1226 2.20625 13.125H12.7937C13.012 13.1226 13.2258 13.0631 13.4139 12.9524C13.602 12.8417 13.7579 12.6837 13.866 12.4941C13.9741 12.3045 14.0306 12.0898 14.03 11.8716C14.0294 11.6533 13.9716 11.439 13.8625 11.25L8.56875 2.41251C8.45733 2.22882 8.30045 2.07696 8.11325 1.97156C7.92604 1.86616 7.71483 1.81079 7.5 1.81079C7.28516 1.81079 7.07395 1.86616 6.88675 1.97156C6.69955 2.07696 6.54267 2.22882 6.43125 2.41251Z" />
+                                            <path d="M7.5 5.625V8.125" />
+                                            <path d="M7.5 10.625H7.50625" />
+                                        </svg>
+                                        <span>Roads &amp; Transit</span>
+                                        <span>48h SLA</span>
+                                    </span>
+                                    <span>Pothole / Sidewalk (Trotoar)</span>
+                                    <span>Potholes, broken sidewalk slabs, damaged drainage grates</span>
+                                    <input type="radio" name="cat">
+                                </label>
+                            </div>
+                        </fieldset>
+                        <div class="rf__form-footer">
+                            <a href="/index.html" class="btn btn--ghost">Cancel</a>
+                            <button type="submit" class="btn">
+                                <span>Continue</span>
+                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" stroke-width="1.08333" stroke-linecap="round"
                                     stroke-linejoin="round" stroke="currentColor" aria-hidden="true">
-                                    <path
-                                        d="M6.43125 2.41251L1.1375 11.25C1.02835 11.439 0.970602 11.6533 0.969991 11.8716C0.96938 12.0898 1.02593 12.3045 1.13401 12.4941C1.2421 12.6837 1.39795 12.8417 1.58607 12.9524C1.77418 13.0631 1.988 13.1226 2.20625 13.125H12.7937C13.012 13.1226 13.2258 13.0631 13.4139 12.9524C13.602 12.8417 13.7579 12.6837 13.866 12.4941C13.9741 12.3045 14.0306 12.0898 14.03 11.8716C14.0294 11.6533 13.9716 11.439 13.8625 11.25L8.56875 2.41251C8.45733 2.22882 8.30045 2.07696 8.11325 1.97156C7.92604 1.86616 7.71483 1.81079 7.5 1.81079C7.28516 1.81079 7.07395 1.86616 6.88675 1.97156C6.69955 2.07696 6.54267 2.22882 6.43125 2.41251Z" />
-                                    <path d="M7.5 5.625V8.125" />
-                                    <path d="M7.5 10.625H7.50625" />
+                                    <path d="M2.70831 6.5H10.2916" />
+                                    <path d="M6.5 2.70825L10.2917 6.49992L6.5 10.2916" />
                                 </svg>
-                                <span>Roads &amp; Transit</span>
-                                <span>48h SLA</span>
-                            </span>
-                            <span>Pothole / Sidewalk (Trotoar)</span>
-                            <span>Potholes, broken sidewalk slabs, damaged drainage grates</span>
-                            <input type="radio" name="cat">
-                        </label>
-                        <label>
-                            <span>
-                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" stroke-width="1.25" stroke-linecap="round"
-                                    stroke-linejoin="round" stroke="currentColor" aria-hidden="true">
-                                    <path
-                                        d="M6.43125 2.41251L1.1375 11.25C1.02835 11.439 0.970602 11.6533 0.969991 11.8716C0.96938 12.0898 1.02593 12.3045 1.13401 12.4941C1.2421 12.6837 1.39795 12.8417 1.58607 12.9524C1.77418 13.0631 1.988 13.1226 2.20625 13.125H12.7937C13.012 13.1226 13.2258 13.0631 13.4139 12.9524C13.602 12.8417 13.7579 12.6837 13.866 12.4941C13.9741 12.3045 14.0306 12.0898 14.03 11.8716C14.0294 11.6533 13.9716 11.439 13.8625 11.25L8.56875 2.41251C8.45733 2.22882 8.30045 2.07696 8.11325 1.97156C7.92604 1.86616 7.71483 1.81079 7.5 1.81079C7.28516 1.81079 7.07395 1.86616 6.88675 1.97156C6.69955 2.07696 6.54267 2.22882 6.43125 2.41251Z" />
-                                    <path d="M7.5 5.625V8.125" />
-                                    <path d="M7.5 10.625H7.50625" />
-                                </svg>
-                                <span>Roads &amp; Transit</span>
-                                <span>48h SLA</span>
-                            </span>
-                            <span>Pothole / Sidewalk (Trotoar)</span>
-                            <span>Potholes, broken sidewalk slabs, damaged drainage grates</span>
-                            <input type="radio" name="cat">
-                        </label>
-                    </fieldset>
-                    <div>
-                        <a href="/index.html">Cancel</a>
-                        <button type="submit">
-                            <span>Continue</span>
-                            <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
-                                xmlns="http://www.w3.org/2000/svg" stroke-width="1.08333" stroke-linecap="round"
-                                stroke-linejoin="round" stroke="currentColor" aria-hidden="true">
-                                <path d="M2.70831 6.5H10.2916" />
-                                <path d="M6.5 2.70825L10.2917 6.49992L6.5 10.2916" />
-                            </svg>
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </section>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
     </main>
     <footer class="page-footer">
         <div class="page-footer__container">
