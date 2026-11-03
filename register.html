@@ -38,19 +38,51 @@
             </div>
             <form action="/index.html">
                 <label>
-                    <span class="modal__form-label">Email Address</span>
+                    <span class="modal__form-label">Full name (nama lengkap) &#42;</span>
                     <span class="modal__form-input">
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
-                            stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
+                            aria-hidden="true" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"
+                            stroke="currentColor">
                             <path
-                                d="M2.33333 2.33331H11.6667C12.311 2.33331 12.8333 2.85565 12.8333 3.49998V10.5C12.8333 11.1443 12.311 11.6666 11.6667 11.6666H2.33333C1.689 11.6666 1.16667 11.1443 1.16667 10.5V3.49998C1.16667 2.85565 1.689 2.33331 2.33333 2.33331Z" />
-                            <path d="M12.8333 4.08331L7 7.58331L1.16667 4.08331" />
+                                d="M11.6667 12.25V11.0833C11.6667 10.4645 11.4209 9.871 10.9833 9.43342C10.5457 8.99583 9.95221 8.75 9.33337 8.75H4.66671C4.04787 8.75 3.45438 8.99583 3.01679 9.43342C2.57921 9.871 2.33337 10.4645 2.33337 11.0833V12.25" />
+                            <path
+                                d="M9.33329 4.08333C9.33329 5.372 8.28862 6.41667 6.99996 6.41667C5.71129 6.41667 4.66663 5.372 4.66663 4.08333C4.66663 2.79467 5.71129 1.75 6.99996 1.75C8.28862 1.75 9.33329 2.79467 9.33329 4.08333Z" />
                         </svg>
-                        <input type="text" placeholder="Enter your email" name="email" />
+                        <input type="text" placeholder="e.g. Budi Santoso" name="fullname" required />
                     </span>
                 </label>
+                <div>
+                    <label>
+                        <span class="modal__form-label">Email Address &#42;</span>
+                        <span class="modal__form-input">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" stroke-width="1.16667" stroke-linecap="round"
+                                stroke-linejoin="round" stroke="currentColor">
+                                <path
+                                    d="M2.33333 2.33331H11.6667C12.311 2.33331 12.8333 2.85565 12.8333 3.49998V10.5C12.8333 11.1443 12.311 11.6666 11.6667 11.6666H2.33333C1.689 11.6666 1.16667 11.1443 1.16667 10.5V3.49998C1.16667 2.85565 1.689 2.33331 2.33333 2.33331Z" />
+                                <path d="M12.8333 4.08331L7 7.58331L1.16667 4.08331" />
+                            </svg>
+                            <input type="email" placeholder="e.g. budi@wargareport.id" name="email" required />
+                        </span>
+                    </label>
+                    <label>
+                        <span class="modal__form-label">Phone / Whatsapp &#42;</span>
+                        <span class="modal__form-input">
+                            <input type="tel" placeholder="+62 856-6767-6767" name="phone" required />
+                        </span>
+                    </label>
+                </div>
                 <label>
-                    <span class="modal__form-label">Password</span>
+                    <span class="modal__form-label">NIK</span>
+                    <span class="modal__form-input">
+                        <input id="input-nik" type="text"
+                            placeholder="16 digits for verified resident badge (e.g. 3174020110100067)" name="nik" />
+                    </span>
+                </label>
+                <small for="input-nik">Used exclusively for verification under UU PDP and never shown to the
+                    public.</small>
+                <label>
+                    <span class="modal__form-label">Password &#42;</span>
                     <span class="modal__form-input">
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
                             stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
@@ -61,10 +93,10 @@
                             <path
                                 d="M4.08333 6.41669V4.08335C4.08333 3.30981 4.39062 2.56794 4.9376 2.02096C5.48459 1.47398 6.22645 1.16669 7 1.16669C7.77355 1.16669 8.51541 1.47398 9.06239 2.02096C9.60937 2.56794 9.91667 3.30981 9.91667 4.08335V6.41669" />
                         </svg>
-                        <input type="password" placeholder="Enter your password" name="password"
-                            class="modal__form-pw-hidden" />
-                        <input type="text" placeholder="Enter your password" name="password" id="showPassword"
-                            class="modal__form-pw-shown" />
+                        <input type="password" placeholder="Create a password" name="password"
+                            class="modal__form-pw-hidden" required />
+                        <input type="text" placeholder="Create a password" name="password" id="showPassword"
+                            class="modal__form-pw-shown" required />
                         <a class="btn btn--ghost modal__form-pw-hidden" href="#showPassword">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" stroke-width="1.33333" stroke-linecap="round"
@@ -92,12 +124,14 @@
                     </span>
                 </label>
                 <button type="submit" class="btn">
-                    <span>Sign In</span>
                     <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
-                        <path d="M2.70834 6.5H10.2917" />
-                        <path d="M6.5 2.70831L10.2917 6.49998L6.5 10.2916" />
+                        aria-hidden="true" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"
+                        stroke="currentColor">
+                        <path
+                            d="M11.9167 6.0017V6.50003C11.916 7.66809 11.5378 8.80464 10.8384 9.74018C10.139 10.6757 9.15599 11.3601 8.03586 11.6913C6.91573 12.0225 5.71856 11.9827 4.62288 11.5779C3.5272 11.1731 2.59173 10.425 1.95598 9.44511C1.32023 8.46521 1.01826 7.30606 1.09512 6.14053C1.17197 4.975 1.62353 3.86554 2.38244 2.97761C3.14136 2.08968 4.16697 1.47086 5.30631 1.21344C6.44565 0.956021 7.63769 1.07379 8.70463 1.5492" />
+                        <path d="M4.875 5.95835L6.5 7.58335L11.9167 2.16669" />
                     </svg>
+                    <span>Create Account &amp; Continue</span>
                 </button>
             </form>
         </div>
