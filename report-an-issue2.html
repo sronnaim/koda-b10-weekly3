@@ -146,43 +146,61 @@
                     <form action="/report-an-issue3.html">
                         <div class="rf__form-location-area-select">
                             <label for="area-select">Kelurahan / Kecamatan & Wilayah</label>
-                            <select name="area" id="area-select">
-                                <option value="a1">Coblong</option>
-                                <option value="a2">Jl. Dago</option>
-                                <option value="a3">Institut Teknologi Bandung (ITB)</option>
-                                <option value="a4">Simpang Dago</option>
-                                <option value="a5">Pasar Dago</option>
-                                <option value="a6">Jl. Ir. H. Juanda</option>
-                            </select>
+                            <div class="rf__form-location-area-select-wrapper">
+                                <select name="area" id="area-select">
+                                    <option value="a1">Coblong</option>
+                                    <option value="a2">Jl. Dago</option>
+                                    <option value="a3">Institut Teknologi Bandung (ITB)</option>
+                                    <option value="a4">Simpang Dago</option>
+                                    <option value="a5">Pasar Dago</option>
+                                    <option value="a6">Jl. Ir. H. Juanda</option>
+                                </select>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="lucide lucide-chevron-down preview-icon rf__form-location-area-chevd"
+                                    aria-hidden="true">
+                                    <path d="m6 9 6 6 6-6" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="lucide lucide-chevron-up preview-icon rf__form-location-area-chevu"
+                                    aria-hidden="true">
+                                    <path d="m18 15-6-6-6 6" />
+                                </svg>
+                            </div>
                         </div>
-                        <fieldset>
+                        <fieldset class="rf__form-location-carea">
                             <legend>Common areas in Coblong · Kota Bandung</legend>
-                            <label>
-                                <span>Jl. Dago</span>
-                                <input type="radio" name="common-area" value="ca1">
-                            </label>
-                            <label>
-                                <span>Institut Teknologi Bandung (ITB)</span>
-                                <input type="radio" name="common-area" value="ca2">
-                            </label>
-                            <label>
-                                <span>Simpang Dago</span>
-                                <input type="radio" name="common-area" value="ca3">
-                            </label>
-                            <label>
-                                <span>Pasar Dago</span>
-                                <input type="radio" name="common-area" value="ca4">
-                            </label>
-                            <label>
-                                <span>Jl. Ir. H. Juanda</span>
-                                <input type="radio" name="common-area" value="ca5">
-                            </label>
+                            <div class="rf__form-location-carea-chips">
+                                <label class="chip">
+                                    <span>Jl. Dago</span>
+                                    <input type="radio" name="common-area" value="ca1">
+                                </label>
+                                <label class="chip">
+                                    <span>Institut Teknologi Bandung (ITB)</span>
+                                    <input type="radio" name="common-area" value="ca2">
+                                </label>
+                                <label class="chip">
+                                    <span>Simpang Dago</span>
+                                    <input type="radio" name="common-area" value="ca3">
+                                </label>
+                                <label class="chip">
+                                    <span>Pasar Dago</span>
+                                    <input type="radio" name="common-area" value="ca4">
+                                </label>
+                                <label class="chip">
+                                    <span>Jl. Ir. H. Juanda</span>
+                                    <input type="radio" name="common-area" value="ca5">
+                                </label>
+                            </div>
                         </fieldset>
-                        <label>
-                            <span>Street Address, RT/RW, or Landmark *</span>
+                        <label class="rf__form-location-addr">
+                            <span>Street Address, RT/RW, or Landmark &#42;</span>
                             <input type="text" name="address" placeholder="Jl. Tamansari depan Kebun Binatang" />
                         </label>
-                        <label>
+                        <label class="rf__form-location-coor">
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" stroke-width="1.16667" stroke-linecap="round"
                                 stroke-linejoin="round" stroke="currentColor" aria-hidden="true">
@@ -193,17 +211,16 @@
                             </svg>
                             <span>Coordinates auto-pinned</span>
                             <span>6.2088° S, 106.8456° E (WIB)</span>
-                            <input type="text">
+                            <input type="text" class="sr-only">
                         </label>
                         <div class="rf__form-footer">
-                            <a href="/report-an-issue.html" class="btn btn--ghost">
+                            <a href="/report-an-issue.html" class="btn btn--secondary rf__form-footer-btn--back">
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round"
                                     stroke="currentColor">
                                     <path d="M9.5 6H2.5" />
                                     <path d="M6 9.5L2.5 6L6 2.5" />
                                 </svg>
-
                                 <span>Back</span>
                             </a>
                             <button type="submit" class="btn">
