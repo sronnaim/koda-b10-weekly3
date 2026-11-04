@@ -92,85 +92,152 @@
         </div>
     </header>
     <main>
-        <div>
+        <div class="notif">
             <div>
-                <hgroup>
+                <hgroup class="main-heading notif__heading">
                     <p>Alerts & Activity</p>
-                    <h1>Notifications</h1>
+                    <span>
+                        <h1>Notifications</h1>
+                        <button type="button" class="btn btn--ghost">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" stroke-width="1.16667"
+                                stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
+                                <path d="M11.6666 3.5L5.24998 9.91667L2.33331 7" />
+                            </svg>
+                            <span>Mark all as read</span>
+                        </button>
+                    </span>
                 </hgroup>
-                <button type="button">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"
-                        stroke="currentColor">
-                        <path d="M11.6666 3.5L5.24998 9.91667L2.33331 7" />
-                    </svg>
-                    <span>Mark all as read</span>
-                </button>
                 <div>
                     <form>
-                        <fieldset>
-                            <legend>Filter</legend>
-                            <li class="chip">All</li>
-                            <li class="chip">Unread</li>
-                            <li class="chip">Status</li>
-                            <li class="chip">Replies</li>
+                        <fieldset class="notif__filter">
+                            <legend>Filter: </legend>
+                            <label class="chip">
+                                All
+                                <input type="radio" name="filter" class="sr-only" />
+                            </label>
+                            <label class="chip">
+                                Unread
+                                <input type="radio" name="filter" class="sr-only" />
+                            </label>
+                            <label class="chip">
+                                Status
+                                <input type="radio" name="filter" class="sr-only" />
+                            </label>
+                            <label class="chip">
+                                Replies
+                                <input type="radio" name="filter" class="sr-only" />
+                            </label>
+
                         </fieldset>
                     </form>
                 </div>
             </div>
             <div>
-                <ol>
+                <ol class="notif__notifs-container">
                     <li>
-                        <a>
+                        <a href="#CMP-2026-9472" class="notif__ni">
                             <span>
                                 <span>CMP-2026-9472</span>
-                                <time datetime="2026-11-03 16:41">04:41 PM</time>
+                                <time datetime="2026-10-30 16:41">04:41 PM</time>
                             </span>
                             <span>
-                                Report received - verification pending
+                                Report received — verification pending
                             </span>
-                            <span>Status Change</span>
-                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="7" height="7" rx="3.5" fill="currentColor" />
-                            </svg>
+                            <span>
+                                Status Change
+                                <svg width="7" height="7" viewBox="0 0 7 7" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="7" height="7" rx="3.5" fill="currentColor" />
+                                </svg>
+                            </span>
                         </a>
                     </li>
                     <li>
-                        <a>
+                        <a href="#CMP-2026-8841" class="notif__ni">
                             <span>
-                                <span>CMP-2026-9472</span>
-                                <time datetime="2026-11-03 16:41">04:41 PM</time>
+                                <span>CMP-2026-8841</span>
+                                <time datetime="2026-10-30 13:28">01:28 PM</time>
                             </span>
                             <span>
                                 Status changed to In review
                             </span>
-                            <span>Status Change</span>
-                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="7" height="7" rx="3.5" fill="currentColor" />
-                            </svg>
+                            <span>
+                                Status Change
+                                <svg width="7" height="7" viewBox="0 0 7 7" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="7" height="7" rx="3.5" fill="currentColor" />
+                                </svg>
+                            </span>
                         </a>
                     </li>
                 </ol>
             </div>
-            <div>
-                <article>
+            <div class="notif__ncontent">
+                <article id="CMP-2026-9472">
                     <hgroup>
                         <p>
                             <span>Incident Reference</span>
-                            <span>Submitted</span>
+                            <span class="btn btn--secondary">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true" stroke-width="1.16667"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
+                                    <path
+                                        d="M12.25 7C12.25 9.8995 9.8995 12.25 7 12.25C4.1005 12.25 1.75 9.8995 1.75 7C1.75 4.1005 4.1005 1.75 7 1.75C9.8995 1.75 12.25 4.1005 12.25 7Z" />
+                                    <path d="M7 4.0835V7.00016L9.04167 8.16683" />
+                                </svg>
+                                Submitted
+                            </span>
                         </p>
                         <h2>CMP-2026-9472</h2>
                     </hgroup>
                     <div>
                         <h3>Report Received</h3>
-                        <p>Dispatched <time datetime="2026-11-03 16:41">Oct 30, 04:41 PM GMT+7</time></p>
+                        <p class="notif__time">Dispatched <time datetime="2026-10-30 16:41">Oct 30, 04:41 PM
+                                GMT+7</time></p>
                     </div>
-                    <div>
+                    <div class="notif__update">
                         Your report CMP-2026-9472 is queued for WargaReport evidence verification. Proposed
                         bureau: Dinas Pertamanan dan Hutan Kota DKI Jakarta. The SLA countdown starts once
                         the report is routed.
                     </div>
-                    <a href="/report1.html">
+                    <a href="/report1.html" class="btn">
+                        <span>Open complaint tracking record</span>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" aria-hidden="true">
+                            <path d="M2.5 6H9.5" />
+                            <path d="M6 2.5L9.5 6L6 9.5" />
+                        </svg>
+                    </a>
+                </article>
+                <article id="CMP-2026-8841">
+                    <hgroup>
+                        <p>
+                            <span>Incident Reference</span>
+                            <span class="btn btn--secondary">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true" stroke-width="1.16667"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
+                                    <path
+                                        d="M12.25 7C12.25 9.8995 9.8995 12.25 7 12.25C4.1005 12.25 1.75 9.8995 1.75 7C1.75 4.1005 4.1005 1.75 7 1.75C9.8995 1.75 12.25 4.1005 12.25 7Z" />
+                                    <path d="M7 4.0835V7.00016L9.04167 8.16683" />
+                                </svg>
+                                Submitted
+                            </span>
+                        </p>
+                        <h2>CMP-2026-8841</h2>
+                    </hgroup>
+                    <div>
+                        <h3>Report Received</h3>
+                        <p class="notif__time">Dispatched <time datetime="2026-10-30 16:41">Oct 30, 04:41 PM
+                                GMT+7</time></p>
+                    </div>
+                    <div class="notif__update">
+                        Your report CMP-2026-8841 is queued for WargaReport evidence verification. Proposed
+                        bureau: Dinas Pertamanan dan Hutan Kota DKI Jakarta. The SLA countdown starts once
+                        the report is routed.
+                    </div>
+                    <a href="/report2.html" class="btn">
                         <span>Open complaint tracking record</span>
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
                             stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" aria-hidden="true">
