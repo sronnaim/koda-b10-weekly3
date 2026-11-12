@@ -129,7 +129,7 @@
     <main class="max-w-[68rem] mx-auto px-4">
         <section class="flex flex-col gap-6">
             <h1
-                class="text-3xl max-w-[21ch] text-center md:text-start md:text-5xl mt-10 font-serif text-accent font-semibold">
+                class="text-3xl max-w-[21ch] text-center md:text-start md:text-5xl mt-10 md:mt-16 font-serif text-accent font-semibold">
                 See something
                 broken?
                 Snap it.
@@ -177,62 +177,66 @@
                 <li><strong>2.3</strong>&ThinSpace;days avg response</li>
             </ul>
         </section>
-        <section>
-            <ol>
+        <section class="mt-8 pt-6 border-t border-border">
+            <ol
+                class="grid gap-3 [&_li]:border [&_li]:border-border sm:grid-cols-2 md:grid-cols-4 [&_li]:p-5 [&_li]:bg-bg-container [&_li]:rounded-2xl [&_li]:flex [&_li]:flex-col [&_li]:gap-2">
                 <li>
-                    <div>
-                        <div>01</div>
-                        <h3>
-                            Snap &amp; Tag
-                        </h3>
-                        <p>Take a photo or quick audio of the issue and provide the street
-                            location.</p>
-                    </div>
+                    <div
+                        class="font-mono font-semibold text-xs text-success-fg bg-success aspect-square w-8 inline-flex justify-center items-center rounded-full border border-succes/50">
+                        01</div>
+                    <h3 class="font-serif font-semibold text-accent">
+                        Snap &amp; Tag
+                    </h3>
+                    <p class="text-xs">Take a photo or quick audio of the issue and provide the street
+                        location.</p>
                 </li>
                 <li>
-                    <div>
-                        <div>02</div>
-                        <h3>
-                            Report Review
-                        </h3>
-                        <p>Take a photo or quick audio of the issue and provide the street
-                            location.</p>
-                    </div>
+                    <div
+                        class="font-mono font-semibold text-xs text-success-fg bg-success aspect-square w-8 inline-flex justify-center items-center rounded-full border border-succes/50">
+                        02</div>
+                    <h3 class="font-serif font-semibold text-accent">
+                        Report Review
+                    </h3>
+                    <p class="text-xs">Take a photo or quick audio of the issue and provide the street
+                        location.</p>
                 </li>
                 <li>
-                    <div>
-                        <div>03</div>
-                        <h3>
-                            Field Fix
-                        </h3>
-                        <p>Take a photo or quick audio of the issue and provide the street
-                            location.</p>
-                    </div>
+                    <div
+                        class="font-mono font-semibold text-xs text-success-fg bg-success aspect-square w-8 inline-flex justify-center items-center rounded-full border border-succes/50">
+
+                        03</div>
+                    <h3 class="font-serif font-semibold text-accent">
+                        Field Fix
+                    </h3>
+                    <p class="text-xs">Take a photo or quick audio of the issue and provide the street
+                        location.</p>
                 </li>
                 <li>
-                    <div>
-                        <div>04</div>
-                        <h3>
-                            Proof &amp; Close
-                        </h3>
-                        <p>Take a photo or quick audio of the issue and provide the street
-                            location.</p>
-                    </div>
+                    <div
+                        class="font-mono font-semibold text-xs text-success-fg bg-success aspect-square w-8 inline-flex justify-center items-center rounded-full border border-succes/50">
+
+                        04</div>
+                    <h3 class="font-serif font-semibold text-accent">
+                        Proof &amp; Close
+                    </h3>
+                    <p class="text-xs">Take a photo or quick audio of the issue and provide the street
+                        location.</p>
                 </li>
             </ol>
         </section>
-        <section>
-            <div>
-                <div>
-                    <h2>Recent Community Reports</h2>
-                    <p>Verified reports lodged in Jakarta and surrounding regions</p>
+        <section class="mt-8 pt-6 border-t border-border">
+            <div class="flex items-end flex-wrap gap-2">
+                <div class="grow">
+                    <h2 class="text-xl font-serif text-accent font-semibold">Recent Community Reports</h2>
+                    <p class="text-xs">Verified reports lodged in Jakarta and surrounding regions</p>
                 </div>
-                <a href="/feed.html">
+                <a href="/feed.html" class="text-xs flex flex-col font-semibold text-primary md:translate-y-4">
                     View live feed
                     <span>&RightArrow;</span>
                 </a>
             </div>
-            <ol>
+            <ol
+                class="mt-6 grid md:grid-cols-2 gap-4 [&_li]:p-4 [&_li]:rounded-2xl [&_li]:border [&_li]:border-border [&_li]:max-w-96 [&_li]:md:max-w-none [&_li]:mx-auto [&_li]:bg-bg-container [&_li>:first-child,&_li_img]:aspect-square [&_li>:first-child]:rounded-2xl [&_li>:first-child]:overflow-hidden [&_li>:first-child]:md:max-w-24 [&_li_img]:w-full [&_li_img]:object-cover">
                 <li>
                     <div>
                         <img src="/assets/r1.jpg">
