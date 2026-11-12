@@ -1,0 +1,31 @@
+@theme {
+    --font-heading: 'Fraunces', serif;
+    --font-body: 'Public Sans', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+
+    --color-app-bg: rgba(247, 242, 231, 1);
+    --color-bg: rgba(255, 253, 248, 1);
+    --color-fg: rgba(76, 91, 82, 1);
+
+    --color-accent: rgba(19, 35, 27, 1);
+
+    --color-primary: rgba(15, 107, 79);
+    --color-primary-fg: rgba(255, 253, 248, 1);
+
+    --color-muted: rgba(244, 239, 228, 1);
+    --color-muted-fg: rgba(132, 146, 138, 1);
+
+    --color-info: rgba(232, 241, 245, 1);
+    --color-info-fg: rgba(47, 96, 126);
+
+    --color-warning: rgba(251, 241, 216, 1);
+    --color-warning-fg: rgba(150, 104, 15);
+
+    --color-success: rgba(229, 243, 234, 1);
+    --color-success-fg: rgba(33, 122, 81, 1);
+
+    --color-danger: rgba(249, 234, 229, 1);
+    --color-danger-fg: rgba(163, 63, 49, 1);
+
+    --color-border: rgba(215, 203, 182, 1);
+}

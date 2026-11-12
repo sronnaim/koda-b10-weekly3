@@ -7,21 +7,60 @@
     <meta name='description'
         content='WargaReport is an independent civic reporting platform for municipal infrastructure issues across Indonesia.'>
     <title>WargaReport</title>
-    <link rel='stylesheet' href='styles.css'>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+        @theme {
+            --font-serif: 'Fraunces', serif;
+            --font-sans: 'Public Sans', sans-serif;
+            --font-mono: 'IBM Plex Mono', monospace;
+
+            --color-bg: rgba(247, 242, 231, 1);
+            --color-bg-container: rgba(255, 253, 248, 1);
+            --color-fg: rgba(76, 91, 82, 1);
+
+            --color-accent: rgba(19, 35, 27, 1);
+
+            --color-primary: rgba(15, 107, 79);
+            --color-primary-fg: rgba(255, 253, 248, 1);
+
+            --color-muted: rgba(244, 239, 228, 1);
+            --color-muted-fg: rgba(132, 146, 138, 1);
+
+            --color-info: rgba(232, 241, 245, 1);
+            --color-info-fg: rgba(47, 96, 126);
+
+            --color-warning: rgba(251, 241, 216, 1);
+            --color-warning-fg: rgba(150, 104, 15);
+
+            --color-success: rgba(229, 243, 234, 1);
+            --color-success-fg: rgba(33, 122, 81, 1);
+
+            --color-danger: rgba(249, 234, 229, 1);
+            --color-danger-fg: rgba(163, 63, 49, 1);
+
+            --color-border: rgba(215, 203, 182, 1);
+        }
+
+    </style>
 </head>
 
-<body>
-    <header class="page-header">
-        <div class="page-header__container">
-            <a href="/index.html" class="logo">
+<body
+    class="font-sans bg-bg text-fg [&_*:focus]:shadow-[0_0_0_3px_black] [&_*:focus]:shadow-primary/50 [&_*:focus]:outline-none [&_*:focus]:rounded-xl [&_*:focus]:border [&_*:focus]:border-primary"
+    data-menu="closed">
+    <header class="bg-bg-container [body[data-menu=opened]_&]:h-screen sticky inset-0">
+        <div
+            class="p-1 mx-auto h-full flex [body[data-menu=opened]_&]:flex-col items-center [body[data-menu=opened]_&]:justify-center relative md:max-w-[68rem]">
+            <a href="/index.html" class="inline-flex items-center font-serif font-bold text-lg p-2 text-accent">
                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true">
+                    aria-hidden="true" class="mr-1">
                     <rect y="3.34491" width="32" height="32" rx="10" transform="rotate(-5.99997 0 3.34491)"
                         fill="#0F6B4F" />
                     <path
@@ -30,73 +69,69 @@
                 </svg>
                 WargaReport
             </a>
-            <div class="page-header__content">
-                <nav class="page-header__nav">
-                    <ul>
+            <div
+                class="grow hidden flex-col font-medium justify-center [body[data-menu=opened]_&]:flex md:flex md:flex-row md:items-center text-sm [&_a]:py-2 [&_a]:px-4 [&_a]:flex [&_a]:items-center [&_a]:text-center [&_a]:gap-2">
+                <nav class="md:grow">
+                    <ul class="md:flex md:items-center md:justify-center">
                         <li>
-                            <a href="/feed.html" class="btn btn--ghost">Live Feed</a>
+                            <a href="/feed.html" class="flex justify-center py-2 px-3 rounded-full">Live Feed</a>
                         </li>
                         <li>
-                            <a href="/track.html" class="btn btn--ghost">Track</a>
+                            <a href="/track.html" class="flex justify-center py-2 px-3 rounded-full">Track</a>
                         </li>
                         <li>
-                            <a href="/help.html" class="btn btn--ghost">How It Works</a>
+                            <a href="/help.html" class="flex justify-center py-2 px-3 rounded-full">How It Works</a>
                         </li>
                     </ul>
                 </nav>
 
-                <div class="page-header__action">
-                    <a href="/login.html" class="btn btn--ghost">
+                <div class="md:flex md:items-center">
+                    <a href="/login.html" class="flex justify-center py-2 px-3 rounded-full">
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
-                            aria-hidden="true">
+                            aria-hidden="true" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
                             <path
-                                d="M7.5 1.5H9.5C9.76522 1.5 10.0196 1.60536 10.2071 1.79289C10.3946 1.98043 10.5 2.23478 10.5 2.5V9.5C10.5 9.76522 10.3946 10.0196 10.2071 10.2071C10.0196 10.3946 9.76522 10.5 9.5 10.5H7.5"
-                                stroke-linecap="round" stroke-linejoin="round" stroke="#4C5B52" />
-                            <path d="M5 8.5L7.5 6L5 3.5" stroke-linecap="round" stroke-linejoin="round"
-                                stroke="#4C5B52" />
-                            <path d="M7.5 6H1.5" stroke-linecap="round" stroke-linejoin="round" stroke="#4C5B52" />
+                                d="M7.5 1.5H9.5C9.76522 1.5 10.0196 1.60536 10.2071 1.79289C10.3946 1.98043 10.5 2.23478 10.5 2.5V9.5C10.5 9.76522 10.3946 10.0196 10.2071 10.2071C10.0196 10.3946 9.76522 10.5 9.5 10.5H7.5" />
+                            <path d="M5 8.5L7.5 6L5 3.5" />
+                            <path d="M7.5 6H1.5" />
                         </svg>
                         Sign In
                     </a>
-                    <a href="/report-an-issue.html" class="btn">
+                    <a href="/report-an-issue.html"
+                        class="flex justify-center bg-primary py-2 px-3 text-bg-container rounded-full">
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
                             aria-hidden="true">
-                            <g clip-path="url(#clip0_2_198)">
-                                <path d="M6 2.5V9.5" stroke-linecap="round" stroke-linejoin="round" stroke="white" />
-                                <path d="M2.5 6H9.5" stroke-linecap="round" stroke-linejoin="round" stroke="white" />
-                            </g>
+                            <path d="M6 2.5V9.5" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" />
+                            <path d="M2.5 6H9.5" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" />
                         </svg>
                         Report
                     </a>
                 </div>
             </div>
-            <details class="page-header__menu-toggle">
-                <summary>
-                    <span class="sr-only">Page Menu</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="page-header__menu-toggle-svg--opened" aria-hidden="true">
-                        <path d="M18 6 6 18" />
-                        <path d="m6 6 12 12" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="page-header__menu-toggle-svg--closed" aria-hidden="true">
-                        <path d="M4 5h16" />
-                        <path d="M4 12h16" />
-                        <path d="M4 19h16" />
-                    </svg>
-                </summary>
-            </details>
+            <button class="p-2 absolute aspect-square top-2 right-2 md:hidden" id="menu-btn">
+                <span class="sr-only">Page Menu</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true" class="hidden [body[data-menu=opened]_&]:inline-block">
+                    <path d="M18 6 6 18" />
+                    <path d="m6 6 12 12" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true" class="inline-block [body[data-menu=opened]_&]:hidden">
+                    <path d="M4 5h16" />
+                    <path d="M4 12h16" />
+                    <path d="M4 19h16" />
+                </svg>
+            </button>
         </div>
     </header>
     <main>
-        <section class="hero">
+        <section>
             <h1>See something broken? Snap it. We push the city to fix it.</h1>
             <p>Potholes, dark streetlights, PAM water leaks, or trash piles. Drop photos, track fixes like a food
                 delivery order, and keep authorities accountable.</p>
-            <div class="hero__cta-btn-group">
-                <a class="btn hero__cta-btn" href="/report-an-issue.html">
+            <div>
+                <a href="/report-an-issue.html">
                     <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg"
                         aria-hidden="true">
                         <path
@@ -118,80 +153,80 @@
                     </svg>
                 </a>
 
-                <a class="btn btn--outline" href="/track.html">
+                <a href="/track.html">
                     Track a case
                 </a>
             </div>
 
-            <ul class="hero__stats">
-                <li class="hero__stat"><strong>48</strong>&ThinSpace;reports today</li>
-                <li class="hero__stat"><strong>194</strong>&ThinSpace;fixed this week</li>
-                <li class="hero__stat"><strong>2.3</strong>&ThinSpace;days avg response</li>
+            <ul>
+                <li><strong>48</strong>&ThinSpace;reports today</li>
+                <li><strong>194</strong>&ThinSpace;fixed this week</li>
+                <li><strong>2.3</strong>&ThinSpace;days avg response</li>
             </ul>
         </section>
-        <section class="steps">
-            <ol class="steps__container">
-                <li class="card">
-                    <div class="card__body">
-                        <div class="btn btn--icon btn--success steps__card-badge">01</div>
-                        <h3 class="card__title">
+        <section>
+            <ol>
+                <li>
+                    <div>
+                        <div>01</div>
+                        <h3>
                             Snap &amp; Tag
                         </h3>
-                        <p class="card__content">Take a photo or quick audio of the issue and provide the street
+                        <p>Take a photo or quick audio of the issue and provide the street
                             location.</p>
                     </div>
                 </li>
-                <li class="card">
-                    <div class="card__body">
-                        <div class="btn btn--icon btn--success steps__card-badge">02</div>
-                        <h3 class="card__title">
+                <li>
+                    <div>
+                        <div>02</div>
+                        <h3>
                             Report Review
                         </h3>
-                        <p class="card__content">Take a photo or quick audio of the issue and provide the street
+                        <p>Take a photo or quick audio of the issue and provide the street
                             location.</p>
                     </div>
                 </li>
-                <li class="card">
-                    <div class="card__body">
-                        <div class="btn btn--icon btn--success steps__card-badge">03</div>
-                        <h3 class="card__title">
+                <li>
+                    <div>
+                        <div>03</div>
+                        <h3>
                             Field Fix
                         </h3>
-                        <p class="card__content">Take a photo or quick audio of the issue and provide the street
+                        <p>Take a photo or quick audio of the issue and provide the street
                             location.</p>
                     </div>
                 </li>
-                <li class="card">
-                    <div class="card__body">
-                        <div class="btn btn--icon btn--success steps__card-badge">04</div>
-                        <h3 class="card__title">
+                <li>
+                    <div>
+                        <div>04</div>
+                        <h3>
                             Proof &amp; Close
                         </h3>
-                        <p class="card__content">Take a photo or quick audio of the issue and provide the street
+                        <p>Take a photo or quick audio of the issue and provide the street
                             location.</p>
                     </div>
                 </li>
             </ol>
         </section>
-        <section class="feed">
-            <div class="feed__header-container">
-                <div class="feed__header">
+        <section>
+            <div>
+                <div>
                     <h2>Recent Community Reports</h2>
                     <p>Verified reports lodged in Jakarta and surrounding regions</p>
                 </div>
-                <a class="btn btn--ghost" href="/feed.html">
+                <a href="/feed.html">
                     View live feed
                     <span>&RightArrow;</span>
                 </a>
             </div>
-            <ol class="feed__reports-container">
-                <li class="card">
-                    <div class="card__thumb">
-                        <img src="/assets/r1.jpg" class="card__thumb-img">
+            <ol>
+                <li>
+                    <div>
+                        <img src="/assets/r1.jpg">
                     </div>
-                    <div class="card__body">
-                        <div class="feed__report-labels">
-                            <span class="btn btn--warn feed__report-status">
+                    <div>
+                        <div>
+                            <span>
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path
@@ -202,15 +237,15 @@
                                 </svg>
                                 In review
                             </span>
-                            <span class="feed__report-id">
+                            <span>
                                 CMP-2026-8841
                             </span>
                         </div>
 
-                        <h3 class="card__title">
+                        <h3>
                             PAM clean drinking water pipeline burst flooding sidewalk in front of Cipete Raya MRT
                         </h3>
-                        <p class="card__content">
+                        <p>
                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <g clip-path="url(#clip0_2_64)">
@@ -227,8 +262,8 @@
                             Jl. Fatmawati Raya No. 42 (depan Stasiun MRT Cipete Raya)
                         </p>
 
-                        <div class="card__footer">
-                            <button class="btn btn--outline feed__card-like-btn">
+                        <div>
+                            <button>
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <g clip-path="url(#clip0_2_71)">
@@ -241,24 +276,24 @@
                                         </g>
                                     </g>
                                 </svg>
-                                <span class="sr-only">Give a like</span>
-                                <span class="sr-only">Liked by 148 citizens</span>
+                                <span>Give a like</span>
+                                <span>Liked by 148 citizens</span>
                                 <span aria-hidden="true">148</span>
                             </button>
-                            <a href="/report1.html" class="btn btn--ghost feed__card-inspect-btn">
+                            <a href="/report1.html">
                                 Inspect
                                 <span>&RightArrow;</span></a>
                         </div>
                     </div>
                 </li>
-                <li class="card">
-                    <div class="card__thumb">
-                        <img src="/assets/r2.jpg" class="card__thumb-img">
+                <li>
+                    <div>
+                        <img src="/assets/r2.jpg">
                     </div>
 
-                    <div class="card__body">
-                        <div class="feed__report-labels">
-                            <span class="btn btn--info feed__report-status">
+                    <div>
+                        <div>
+                            <span>
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path
@@ -272,15 +307,15 @@
                                 </svg>
                                 Assigned
                             </span>
-                            <span class="feed__report-id">
+                            <span>
                                 CMP-2026-8819
                             </span>
                         </div>
 
-                        <h3 class="card__title">
+                        <h3>
                             Severe 15cm asphalt cavity in TransJakarta corridor causing motorbike rim damage
                         </h3>
-                        <p class="card__content">
+                        <p>
                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <g clip-path="url(#clip0_2_64)">
@@ -296,8 +331,8 @@
                             </svg>
                             Jl. Gatot Subroto Kav. 38 (depan Menara Mulia, Jalur TransJakarta)
                         </p>
-                        <div class="card__footer">
-                            <button class="btn btn--outline feed__card-like-btn">
+                        <div>
+                            <button>
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <g clip-path="url(#clip0_2_71)">
@@ -310,25 +345,25 @@
                                         </g>
                                     </g>
                                 </svg>
-                                <span class="sr-only">Give a like</span>
-                                <span class="sr-only">Liked by 92 citizens</span>
+                                <span>Give a like</span>
+                                <span>Liked by 92 citizens</span>
                                 <span aria-hidden="true">92</span>
                             </button>
-                            <a href="/report2.html" class="btn btn--ghost feed__card-inspect-btn">
+                            <a href="/report2.html">
                                 Inspect
                                 <span>&RightArrow;</span>
                             </a>
                         </div>
                     </div>
                 </li>
-                <li class="card" data-closed="true">
-                    <div class="card__thumb">
-                        <img src="/assets/r3.jpg" class="card__thumb-img">
+                <li data-closed="true">
+                    <div>
+                        <img src="/assets/r3.jpg">
                     </div>
 
-                    <div class="card__body">
-                        <div class="feed__report-labels">
-                            <span class="btn btn--success feed__report-status">
+                    <div>
+                        <div>
+                            <span>
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <g clip-path="url(#clip0_2_107)">
@@ -341,14 +376,14 @@
                                 </svg>
                                 Resolved
                             </span>
-                            <span class="feed__report-id">
+                            <span>
                                 CMP-2026-8794
                             </span>
                         </div>
-                        <h3 class="card__title">
+                        <h3>
                             Complete PJU streetlight outage spanning 300 meters along residential corridor
                         </h3>
-                        <p class="card__content">
+                        <p>
                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <g clip-path="url(#clip0_2_115)">
@@ -364,8 +399,8 @@
                             </svg>
                             Jl. Tebet Barat Dalam Raya No. 24, RT 08 / RW 03
                         </p>
-                        <div class="card__footer">
-                            <button class="btn btn--outline feed__card-like-btn">
+                        <div>
+                            <button>
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <g clip-path="url(#clip0_2_71)">
@@ -378,24 +413,24 @@
                                         </g>
                                     </g>
                                 </svg>
-                                <span class="sr-only">Liked by 64 citizens</span>
+                                <span>Liked by 64 citizens</span>
                                 <span aria-hidden="true">64</span>
                             </button>
-                            <a href="/report3.html" class="btn btn--ghost feed__card-inspect-btn">
+                            <a href="/report3.html">
                                 Inspect
                                 <span>&RightArrow;</span>
                             </a>
                         </div>
                     </div>
                 </li>
-                <li class="card">
-                    <div class="card__thumb">
-                        <img src="/assets/r4.jpg" class="card__thumb-img">
+                <li>
+                    <div>
+                        <img src="/assets/r4.jpg">
                     </div>
 
-                    <div class="card__body">
-                        <div class="feed__report-labels">
-                            <span class="btn btn--warn feed__report-status">
+                    <div>
+                        <div>
+                            <span>
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -407,15 +442,15 @@
 
                                 In review
                             </span>
-                            <span class="feed__report-id">
+                            <span>
                                 CMP-2026-8720
                             </span>
                         </div>
 
-                        <h3 class="card__title">
+                        <h3>
                             Illegal household trash accumulation obstructing drainage at Kali Krukut Kemang
                         </h3>
-                        <p class="card__content">
+                        <p>
                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_2_115)">
@@ -431,8 +466,8 @@
                             </svg>
                             Kampung Kemang, RT 02 / RW 01 (bantara Kali Krukut)
                         </p>
-                        <div class="card__footer">
-                            <button class="btn btn--outline feed__card-like-btn">
+                        <div>
+                            <button>
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_2_71)">
@@ -445,11 +480,11 @@
                                         </g>
                                     </g>
                                 </svg>
-                                <span class="sr-only">Give a like</span>
-                                <span class="sr-only">Liked by 78 citizens</span>
+                                <span>Give a like</span>
+                                <span>Liked by 78 citizens</span>
                                 <span aria-hidden="true">78</span>
                             </button>
-                            <a href="/report4.html" class="btn btn--ghost feed__card-inspect-btn">
+                            <a href="/report4.html">
                                 Inspect
                                 <span>&RightArrow;</span>
                             </a>
@@ -459,20 +494,20 @@
             </ol>
         </section>
     </main>
-    <footer class="page-footer">
-        <div class="page-footer__container">
-            <div class="page-footer__brand">
-                <a href="/index.html" class="logo">WargaReport</a>
+    <footer>
+        <div>
+            <div>
+                <a href="/index.html">WargaReport</a>
                 <p>WargaReport is an independent civic reporting platform for municipal infrastructure issues across
                     Indonesia. Residents submit evidence, follow SLA countdowns, and track resolution updates from the
                     responsible agencies.</p>
-                <p class="page-footer__emerg"><em>Not for life-threatening emergencies, call <a href="tel:112">112</a>
+                <p><em>Not for life-threatening emergencies, call <a href="tel:112">112</a>
                         (National Emergency Call Center) or BPBD DKI directly.</em></p>
             </div>
 
-            <nav class="page-footer__nav">
-                <div class="page-footer__nav-group">
-                    <h3 class="page-footer__nav-group-header">Citizens</h3>
+            <nav>
+                <div>
+                    <h3>Citizens</h3>
                     <ul>
                         <li>
                             <a href="/report-an-issue.html">File a report</a>
@@ -488,8 +523,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="page-footer__nav-group">
-                    <h3 class="page-footer__nav-group-header">Agencies</h3>
+                <div>
+                    <h3>Agencies</h3>
                     <ul>
                         <li>
                             <a href="/bureaus.html">Participating bureaus</a>
@@ -502,8 +537,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="page-footer__nav-group">
-                    <h3 class="page-footer__nav-group-header">Civic Trust</h3>
+                <div>
+                    <h3>Civic Trust</h3>
                     <ul>
                         <li>
                             <a href="/help.html">Help &amp; FAQs</a>
@@ -517,7 +552,7 @@
                     </ul>
                 </div>
             </nav>
-            <section class="page-footer__cc">
+            <section>
                 <p>
                     © 2026 WargaReport. All rights reserved.
                 </p>
@@ -527,6 +562,43 @@
             </section>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"
+        integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <script>
+        function lockPage() {
+            $("footer").attr("inert", "")
+            $("body").attr("data-menu", "opened")
+            $("main").attr("inert", "")
+        }
+
+        function unlockPage() {
+            $("footer").removeAttr("inert")
+            $("main").removeAttr("inert")
+            $("body").attr("data-menu", "closed")
+        }
+
+        // Mobile Menu
+        $("#menu-btn").on("click", () => {
+            let menuState = $("body").attr("data-menu")
+
+            if (menuState === "closed")
+                lockPage()
+            else
+                unlockPage()
+
+            console.log($("body").attr("data-menu"))
+        })
+
+        window.addEventListener("resize", () => {
+            if (window.innerWidth >= 768)
+                unlockPage()
+        })
+
+        addEventListener("load", () => {
+            if (window.innerWidth >= 768)
+                unlockPage()
+        })
+    </script>
 </body>
 
 </html>
